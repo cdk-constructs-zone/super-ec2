@@ -53,12 +53,12 @@ new JenkinsEC2(scope: Construct, id: string, props?: IJenkinsEC2Props)
 
 
 ```ts
-jenkinsUserData(): string
+jenkinsUserData(): Array<string>
 ```
 
 
 __Returns__:
-* <code>string</code>
+* <code>Array<string></code>
 
 
 
@@ -90,6 +90,7 @@ new SuperEC2Base(scope: Construct, id: string, props: ISuperEC2BaseProps)
 
 Name | Type | Description 
 -----|------|-------------
+**defaultSecurityGroup**🔹 | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | <span></span>
 **instance**🔹 | <code>[IInstance](#aws-cdk-aws-ec2-iinstance)</code> | <span></span>
 **userData**🔹 | <code>[UserData](#aws-cdk-aws-ec2-userdata)</code> | <span></span>
 **vpc**🔹 | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | <span></span>

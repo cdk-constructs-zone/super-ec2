@@ -29,6 +29,7 @@ export abstract class SuperEC2Base extends cdk.Construct {
   readonly instance: ec2.IInstance;
   readonly vpc: ec2.IVpc;
   readonly userData: ec2.UserData;
+  readonly defaultSecurityGroup: ec2.SecurityGroup;
   constructor(scope: cdk.Construct, id: string, props: ISuperEC2BaseProps ) {
     super(scope, id);
     this.vpc = props.vpc ?? new ec2.Vpc(this, 'SuperEC2Vpc', {
@@ -37,11 +38,16 @@ export abstract class SuperEC2Base extends cdk.Construct {
       natGateways: 1,
     });
     this.userData = ec2.UserData.forLinux();
+    this.defaultSecurityGroup = new ec2.SecurityGroup(this, 'defaultSecurityGroup', {
+      vpc: this.vpc,
+    });
     this.instance = new ec2.Instance(this, 'SuperEC2', {
       machineImage: props.amiOSType ? amiFinder(props?.amiOSType) : amiFinder(AmiOSType.AMAZON_LINUX_2),
       vpc: this.vpc,
       instanceType: props.instanceType ?? new ec2.InstanceType('t3.small'),
       userData: this.userData,
+      securityGroup: this.defaultSecurityGroup,
     });
+
   }
 }
