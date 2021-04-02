@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/cdk-constructs-zone/super-ec2/compare/v0.0.6...v0.0.7) (2021-04-02)
+
+
+### Features
+
+* **doc:** Update issue templates ([67e2caf](https://github.com/cdk-constructs-zone/super-ec2/commit/67e2caf957c355324fe95ff5ae2c57d44b4cd98e))
+
 ### [0.0.6](https://github.com/cdk-constructs-zone/super-ec2/compare/v0.0.5...v0.0.6) (2021-03-30)
 
 
