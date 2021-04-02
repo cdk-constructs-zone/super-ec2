@@ -13,7 +13,7 @@ const project = new AwsCdkConstructLibrary({
   authorOrganization: true,
   authorUrl: 'https://github.com/cdk-constructs-zone',
   npmAccess: 'public',
-  cdkVersion: '1.95.1',
+  cdkVersion: '1.96.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: '@cdk-constructs-zone/super-ec2',
