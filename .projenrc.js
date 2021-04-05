@@ -53,8 +53,6 @@ const project = new AwsCdkConstructLibrary({
 const automation = new Automation(project, {
   automationToken: AUTOMATION_TOKEN,
 });
-automation.autoApprove();
-automation.autoMerge();
 automation.projenYarnUpgrade();
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log', '*.zip'];
