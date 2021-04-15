@@ -26,7 +26,7 @@ export interface ISuperEC2BaseProps {
 }
 
 export abstract class SuperEC2Base extends cdk.Construct {
-  readonly instance: ec2.IInstance;
+  readonly instance: ec2.Instance;
   readonly vpc: ec2.IVpc;
   readonly userData: ec2.UserData;
   readonly defaultSecurityGroup: ec2.SecurityGroup;
