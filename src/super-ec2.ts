@@ -48,6 +48,6 @@ export abstract class SuperEC2Base extends cdk.Construct {
       userData: this.userData,
       securityGroup: this.defaultSecurityGroup,
     });
-
+    this.instance.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMManagedInstanceCore'));
   }
 }
