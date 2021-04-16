@@ -1,4 +1,5 @@
 import * as ec2 from '@aws-cdk/aws-ec2';
+import * as iam from '@aws-cdk/aws-iam';
 import * as cdk from '@aws-cdk/core';
 import { AmiOSType, amiFinder } from './ami';
 export interface ISuperEC2BaseProps {
@@ -26,7 +27,7 @@ export interface ISuperEC2BaseProps {
 }
 
 export abstract class SuperEC2Base extends cdk.Construct {
-  readonly instance: ec2.IInstance;
+  readonly instance: ec2.Instance;
   readonly vpc: ec2.IVpc;
   readonly userData: ec2.UserData;
   readonly defaultSecurityGroup: ec2.SecurityGroup;
@@ -48,6 +49,6 @@ export abstract class SuperEC2Base extends cdk.Construct {
       userData: this.userData,
       securityGroup: this.defaultSecurityGroup,
     });
-
+    this.instance.role.addManagedPolicy(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMManagedInstanceCore'));
   }
 }

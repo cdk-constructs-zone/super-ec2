@@ -27,6 +27,11 @@ const project = new AwsCdkConstructLibrary({
   compat: true,
   stability: 'experimental',
   cdkDependencies: [
+    '@aws-cdk/aws-elasticloadbalancingv2-targets',
+    '@aws-cdk/aws-elasticloadbalancingv2',
+    '@aws-cdk/aws-certificatemanager',
+    '@aws-cdk/aws-route53',
+    '@aws-cdk/aws-route53-targets',
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-ec2',
     '@aws-cdk/aws-autoscaling',
