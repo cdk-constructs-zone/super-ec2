@@ -20,7 +20,7 @@ export interface IJenkinsEC2Props extends ISuperEC2BaseProps {
    */
   loadbalancerType?: ELBtype;
   /**
-   * Privide domain attribute.
+   * Provide domain attribute.
    * @default - Not use certificate and route53
    */
   domain?: IDomainProps;
