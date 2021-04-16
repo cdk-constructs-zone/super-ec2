@@ -172,7 +172,7 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **amiOSType**?🔹 | <code>[AmiOSType](#cdk-constructs-zone-super-ec2-amiostype)</code> | Super EC2 OS you want.<br/>__*Default*__: Amzaon Linux 2.
-**domain**?🔹 | <code>[IDomainProps](#cdk-constructs-zone-super-ec2-idomainprops)</code> | Privide domain attribute.<br/>__*Default*__: Not use certificate and route53
+**domain**?🔹 | <code>[IDomainProps](#cdk-constructs-zone-super-ec2-idomainprops)</code> | Provide domain attribute.<br/>__*Default*__: Not use certificate and route53
 **instanceType**?🔹 | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | Super EC2 Instance Type.<br/>__*Default*__: t3.small.
 **loadbalancer**?🔹 | <code>[ApplicationLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-applicationloadbalancer) &#124; [NetworkLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-networkloadbalancer)</code> | Provide a loadbalancer.<br/>__*Default*__: Create ApplicationLoadBalancer
 **loadbalancerType**?🔹 | <code>[ELBtype](#cdk-constructs-zone-super-ec2-elbtype)</code> | ELB type.<br/>__*Default*__: ELBtype.ALB
