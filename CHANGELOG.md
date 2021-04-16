@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/cdk-constructs-zone/super-ec2/compare/v0.0.16...v0.0.17) (2021-04-16)
+
+
+### Features
+
+* add elb and route53 option for JenkinsEC2 ([#13](https://github.com/cdk-constructs-zone/super-ec2/issues/13)) ([10d444d](https://github.com/cdk-constructs-zone/super-ec2/commit/10d444dde8dd7ce2099568c312dbfb9030ce512e))
+
 ### [0.0.16](https://github.com/cdk-constructs-zone/super-ec2/compare/v0.0.15...v0.0.16) (2021-04-16)
 
 ### [0.0.15](https://github.com/cdk-constructs-zone/super-ec2/compare/v0.0.14...v0.0.15) (2021-04-15)
