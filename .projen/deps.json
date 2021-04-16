@@ -108,7 +108,22 @@
       "type": "peer"
     },
     {
+      "name": "@aws-cdk/aws-certificatemanager",
+      "version": "^1.96.0",
+      "type": "peer"
+    },
+    {
       "name": "@aws-cdk/aws-ec2",
+      "version": "^1.96.0",
+      "type": "peer"
+    },
+    {
+      "name": "@aws-cdk/aws-elasticloadbalancingv2-targets",
+      "version": "^1.96.0",
+      "type": "peer"
+    },
+    {
+      "name": "@aws-cdk/aws-elasticloadbalancingv2",
       "version": "^1.96.0",
       "type": "peer"
     },
@@ -124,6 +139,16 @@
     },
     {
       "name": "@aws-cdk/aws-logs",
+      "version": "^1.96.0",
+      "type": "peer"
+    },
+    {
+      "name": "@aws-cdk/aws-route53-targets",
+      "version": "^1.96.0",
+      "type": "peer"
+    },
+    {
+      "name": "@aws-cdk/aws-route53",
       "version": "^1.96.0",
       "type": "peer"
     },
@@ -173,7 +198,22 @@
       "type": "runtime"
     },
     {
+      "name": "@aws-cdk/aws-certificatemanager",
+      "version": "^1.96.0",
+      "type": "runtime"
+    },
+    {
       "name": "@aws-cdk/aws-ec2",
+      "version": "^1.96.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-elasticloadbalancingv2-targets",
+      "version": "^1.96.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-elasticloadbalancingv2",
       "version": "^1.96.0",
       "type": "runtime"
     },
@@ -189,6 +229,16 @@
     },
     {
       "name": "@aws-cdk/aws-logs",
+      "version": "^1.96.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-route53-targets",
+      "version": "^1.96.0",
+      "type": "runtime"
+    },
+    {
+      "name": "@aws-cdk/aws-route53",
       "version": "^1.96.0",
       "type": "runtime"
     },
