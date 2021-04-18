@@ -29,8 +29,8 @@ const jks = new JenkinsEC2(stack, 'superJks', {});
 new cdk.CfnOutput(stack, 'loadbalancerDNS', {
   value: jks.loadbalancer.loadBalancerDnsName,
 });
-new cdk.CfnOutput(stack, 'instanceID', {
-  value: jks.instance.instanceId,
+new cdk.CfnOutput(stack, 'connect-to-instance', {
+  value: `aws ssm start-session --target ${jks.instance.instanceId}`,
 });
 ```
 * Deploy Jenkins with self-defined VPC and NLB
