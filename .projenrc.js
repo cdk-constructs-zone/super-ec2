@@ -1,5 +1,4 @@
 const { AwsCdkConstructLibrary } = require('projen');
-const { Automation } = require('projen-automate-it');
 
 const PROJECT_NAME = 'super-ec2';
 const PROJECT_DESCRIPTION = 'A construct lib for AWS CDK EC2';
@@ -55,10 +54,6 @@ const project = new AwsCdkConstructLibrary({
     module: 'super_ec2',
   },
 });
-const automation = new Automation(project, {
-  automationToken: AUTOMATION_TOKEN,
-});
-automation.projenYarnUpgrade();
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log', '*.zip'];
 project.gitignore.exclude(...common_exclude);
