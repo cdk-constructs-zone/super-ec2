@@ -73,17 +73,12 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^11",
-      "type": "build"
-    },
-    {
       "name": "projen-automate-it",
       "type": "build"
     },
     {
       "name": "projen",
-      "version": "^0.18.5",
+      "version": "^0.22.8",
       "type": "build"
     },
     {

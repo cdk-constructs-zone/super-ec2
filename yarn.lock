@@ -6148,10 +6148,10 @@ projen@^0.17:
     yaml "^1.10.2"
     yargs "^16.2.0"
 
-projen@^0.18.5:
-  version "0.18.5"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.18.5.tgz#1d140ad612fdd3225158dc33ba520dc28678b6de"
-  integrity sha512-35US9AmsJ7UuPtlpxSjT3+iWFuvJWjvP5+3BsOwJ2Hf86bxUm7L+F3Jac+ko5HCR4jwXxgBQO5H3fMSWq6Qbaw==
+projen@^0.22.8:
+  version "0.22.8"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.22.8.tgz#40997b19a7c807a48aeba010b073950a24d3ce22"
+  integrity sha512-Xb1oaE7JANYTHrc3p8b4NR0MU1jCsEeXkqtMEVcyGE5ufF2eGFZKpHxB3tErzLBPD9PE41g2mvYQ+k9dZ5cxlA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.1"
