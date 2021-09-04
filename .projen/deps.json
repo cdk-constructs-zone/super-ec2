@@ -73,12 +73,7 @@
       "type": "build"
     },
     {
-      "name": "projen-automate-it",
-      "type": "build"
-    },
-    {
       "name": "projen",
-      "version": "^0.22.8",
       "type": "build"
     },
     {
@@ -97,10 +92,6 @@
     {
       "name": "xmldom",
       "type": "build"
-    },
-    {
-      "name": "projen-automate-it",
-      "type": "bundled"
     },
     {
       "name": "@aws-cdk/aws-autoscaling-hooktargets",

@@ -45,6 +45,7 @@ const project = new AwsCdkConstructLibrary({
   minNodeVersion: '12.19.0',
   autoDetectBin: false,
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve'],
       secret: 'AUTOMATION_GITHUB_TOKEN',
@@ -56,9 +57,7 @@ const project = new AwsCdkConstructLibrary({
   },
   devDeps: [
     'xmldom',
-    'projen-automate-it',
   ],
-  bundledDeps: ['projen-automate-it'],
   python: {
     distName: 'super-ec2',
     module: 'super_ec2',
