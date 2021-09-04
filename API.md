@@ -1,241 +1,432 @@
-# API Reference
+# API Reference <a name="API Reference"></a>
 
-**Classes**
+## Constructs <a name="Constructs"></a>
 
-Name|Description
-----|-----------
-[JenkinsEC2](#cdk-constructs-zone-super-ec2-jenkinsec2)|*No description*
-[SuperDomain](#cdk-constructs-zone-super-ec2-superdomain)|*No description*
-[SuperEC2Base](#cdk-constructs-zone-super-ec2-superec2base)|*No description*
+### JenkinsEC2 <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2"></a>
 
+#### Initializer <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.Initializer"></a>
 
-**Interfaces**
+```typescript
+import { JenkinsEC2 } from '@cdk-constructs-zone/super-ec2'
 
-Name|Description
-----|-----------
-[IDomainProps](#cdk-constructs-zone-super-ec2-idomainprops)|*No description*
-[IJenkinsEC2Props](#cdk-constructs-zone-super-ec2-ijenkinsec2props)|*No description*
-[ISuperDomainProps](#cdk-constructs-zone-super-ec2-isuperdomainprops)|*No description*
-[ISuperEC2BaseProps](#cdk-constructs-zone-super-ec2-isuperec2baseprops)|*No description*
-
-
-**Enums**
-
-Name|Description
-----|-----------
-[AmiOSType](#cdk-constructs-zone-super-ec2-amiostype)|*No description*
-[ELBtype](#cdk-constructs-zone-super-ec2-elbtype)|*No description*
-
-
-
-## class JenkinsEC2 🔹 <a id="cdk-constructs-zone-super-ec2-jenkinsec2"></a>
-
-
-
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [SuperEC2Base](#cdk-constructs-zone-super-ec2-superec2base)
-
-### Initializer
-
-
-
-
-```ts
 new JenkinsEC2(scope: Construct, id: string, props: IJenkinsEC2Props)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
-* **id** (<code>string</code>)  *No description*
-* **props** (<code>[IJenkinsEC2Props](#cdk-constructs-zone-super-ec2-ijenkinsec2props)</code>)  *No description*
+##### `scope`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.parameter.scope"></a>
 
+- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
 
+---
 
-### Properties
+##### `id`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.parameter.id"></a>
 
+- *Type:* `string`
 
-Name | Type | Description 
------|------|-------------
-**loadbalancer**🔹 | <code>[ApplicationLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-applicationloadbalancer) &#124; [NetworkLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-networkloadbalancer)</code> | <span></span>
-**domain**?🔹 | <code>[SuperDomain](#cdk-constructs-zone-super-ec2-superdomain)</code> | __*Optional*__
+---
 
-### Methods
+##### `props`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.parameter.props"></a>
 
+- *Type:* [`@cdk-constructs-zone/super-ec2.IJenkinsEC2Props`](#@cdk-constructs-zone/super-ec2.IJenkinsEC2Props)
 
-#### jenkinsUserData()🔹 <a id="cdk-constructs-zone-super-ec2-jenkinsec2-jenkinsuserdata"></a>
+---
 
+#### Methods <a name="Methods"></a>
 
+##### `jenkinsUserData` <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.jenkinsUserData"></a>
 
-```ts
-jenkinsUserData(): Array<string>
+```typescript
+public jenkinsUserData()
 ```
 
 
-__Returns__:
-* <code>Array<string></code>
+#### Properties <a name="Properties"></a>
+
+##### `loadbalancer`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.property.loadbalancer"></a>
+
+- *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
+
+---
+
+##### `domain`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.property.domain"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.SuperDomain`](#@cdk-constructs-zone/super-ec2.SuperDomain)
+
+---
 
 
+### SuperDomain <a name="@cdk-constructs-zone/super-ec2.SuperDomain"></a>
 
-## class SuperDomain 🔹 <a id="cdk-constructs-zone-super-ec2-superdomain"></a>
+#### Initializer <a name="@cdk-constructs-zone/super-ec2.SuperDomain.Initializer"></a>
 
+```typescript
+import { SuperDomain } from '@cdk-constructs-zone/super-ec2'
 
-
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
-
-### Initializer
-
-
-
-
-```ts
 new SuperDomain(scope: Construct, id: string, props: ISuperDomainProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
-* **id** (<code>string</code>)  *No description*
-* **props** (<code>[ISuperDomainProps](#cdk-constructs-zone-super-ec2-isuperdomainprops)</code>)  *No description*
+##### `scope`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.parameter.scope"></a>
+
+- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+
+---
+
+##### `id`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.parameter.id"></a>
+
+- *Type:* `string`
+
+---
+
+##### `props`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.parameter.props"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.ISuperDomainProps`](#@cdk-constructs-zone/super-ec2.ISuperDomainProps)
+
+---
 
 
 
-### Properties
+#### Properties <a name="Properties"></a>
+
+##### `acm`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.acm"></a>
+
+- *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
+
+---
+
+##### `record`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.record"></a>
+
+- *Type:* [`@aws-cdk/aws-route53.ARecord`](#@aws-cdk/aws-route53.ARecord)
+
+---
+
+##### `zone`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.zone"></a>
+
+- *Type:* [`@aws-cdk/aws-route53.IHostedZone`](#@aws-cdk/aws-route53.IHostedZone)
+
+---
 
 
-Name | Type | Description 
------|------|-------------
-**acm**🔹 | <code>[ICertificate](#aws-cdk-aws-certificatemanager-icertificate)</code> | <span></span>
-**record**🔹 | <code>[ARecord](#aws-cdk-aws-route53-arecord)</code> | <span></span>
-**zone**🔹 | <code>[IHostedZone](#aws-cdk-aws-route53-ihostedzone)</code> | <span></span>
+### SuperEC2Base <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base"></a>
 
+#### Initializer <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.Initializer"></a>
 
+```typescript
+import { SuperEC2Base } from '@cdk-constructs-zone/super-ec2'
 
-## class SuperEC2Base 🔹 <a id="cdk-constructs-zone-super-ec2-superec2base"></a>
-
-
-
-__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
-__Extends__: [Construct](#aws-cdk-core-construct)
-__Implemented by__: [JenkinsEC2](#cdk-constructs-zone-super-ec2-jenkinsec2)
-
-### Initializer
-
-
-
-
-```ts
 new SuperEC2Base(scope: Construct, id: string, props: ISuperEC2BaseProps)
 ```
 
-* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
-* **id** (<code>string</code>)  *No description*
-* **props** (<code>[ISuperEC2BaseProps](#cdk-constructs-zone-super-ec2-isuperec2baseprops)</code>)  *No description*
+##### `scope`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.parameter.scope"></a>
+
+- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+
+---
+
+##### `id`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.parameter.id"></a>
+
+- *Type:* `string`
+
+---
+
+##### `props`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.parameter.props"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps`](#@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps)
+
+---
 
 
 
-### Properties
+#### Properties <a name="Properties"></a>
 
+##### `defaultSecurityGroup`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.defaultSecurityGroup"></a>
 
-Name | Type | Description 
------|------|-------------
-**defaultSecurityGroup**🔹 | <code>[SecurityGroup](#aws-cdk-aws-ec2-securitygroup)</code> | <span></span>
-**instance**🔹 | <code>[Instance](#aws-cdk-aws-ec2-instance)</code> | <span></span>
-**userData**🔹 | <code>[UserData](#aws-cdk-aws-ec2-userdata)</code> | <span></span>
-**vpc**🔹 | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | <span></span>
+- *Type:* [`@aws-cdk/aws-ec2.SecurityGroup`](#@aws-cdk/aws-ec2.SecurityGroup)
 
+---
 
+##### `instance`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.instance"></a>
 
-## interface IDomainProps 🔹 <a id="cdk-constructs-zone-super-ec2-idomainprops"></a>
+- *Type:* [`@aws-cdk/aws-ec2.Instance`](#@aws-cdk/aws-ec2.Instance)
 
+---
 
+##### `userData`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.userData"></a>
 
+- *Type:* [`@aws-cdk/aws-ec2.UserData`](#@aws-cdk/aws-ec2.UserData)
 
-### Properties
+---
 
+##### `vpc`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.vpc"></a>
 
-Name | Type | Description 
------|------|-------------
-**hostedZoneId**🔹 | <code>string</code> | HostZoneID.
-**recordName**🔹 | <code>string</code> | recordname (e.g., superjks).
-**zoneName**🔹 | <code>string</code> | zonename (e.g., `cdk-construct-zone.com`).
-**acm**?🔹 | <code>[ICertificate](#aws-cdk-aws-certificatemanager-icertificate)</code> | Provide a certificate.<br/>__*Default*__: Create a new certificate (validate from DNS)
-**ttl**?🔹 | <code>[Duration](#aws-cdk-core-duration)</code> | record cache time.<br/>__*Optional*__
+- *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
 
-
-
-## interface IJenkinsEC2Props 🔹 <a id="cdk-constructs-zone-super-ec2-ijenkinsec2props"></a>
-
-
-
-
-### Properties
-
-
-Name | Type | Description 
------|------|-------------
-**amiOSType**?🔹 | <code>[AmiOSType](#cdk-constructs-zone-super-ec2-amiostype)</code> | Super EC2 OS you want.<br/>__*Default*__: Amzaon Linux 2.
-**domain**?🔹 | <code>[IDomainProps](#cdk-constructs-zone-super-ec2-idomainprops)</code> | Provide domain attribute.<br/>__*Default*__: Not use certificate and route53
-**instanceType**?🔹 | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | Super EC2 Instance Type.<br/>__*Default*__: t3.small.
-**loadbalancer**?🔹 | <code>[ApplicationLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-applicationloadbalancer) &#124; [NetworkLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-networkloadbalancer)</code> | Provide a loadbalancer.<br/>__*Default*__: Create ApplicationLoadBalancer
-**loadbalancerType**?🔹 | <code>[ELBtype](#cdk-constructs-zone-super-ec2-elbtype)</code> | ELB type.<br/>__*Default*__: ELBtype.ALB
-**vpc**?🔹 | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | Super EC2 Vpc.<br/>__*Default*__: Create a new Vpc.
-
-
-
-## interface ISuperDomainProps 🔹 <a id="cdk-constructs-zone-super-ec2-isuperdomainprops"></a>
+---
 
 
 
 
-### Properties
+## Protocols <a name="Protocols"></a>
+
+### IDomainProps <a name="@cdk-constructs-zone/super-ec2.IDomainProps"></a>
+
+- *Implemented By:* [`@cdk-constructs-zone/super-ec2.IDomainProps`](#@cdk-constructs-zone/super-ec2.IDomainProps), [`@cdk-constructs-zone/super-ec2.ISuperDomainProps`](#@cdk-constructs-zone/super-ec2.ISuperDomainProps)
 
 
-Name | Type | Description 
------|------|-------------
-**hostedZoneId**🔹 | <code>string</code> | HostZoneID.
-**loadbalancer**🔹 | <code>[ApplicationLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-applicationloadbalancer) &#124; [NetworkLoadBalancer](#aws-cdk-aws-elasticloadbalancingv2-networkloadbalancer)</code> | <span></span>
-**recordName**🔹 | <code>string</code> | recordname (e.g., superjks).
-**zoneName**🔹 | <code>string</code> | zonename (e.g., `cdk-construct-zone.com`).
-**acm**?🔹 | <code>[ICertificate](#aws-cdk-aws-certificatemanager-icertificate)</code> | Provide a certificate.<br/>__*Default*__: Create a new certificate (validate from DNS)
-**ttl**?🔹 | <code>[Duration](#aws-cdk-core-duration)</code> | record cache time.<br/>__*Optional*__
+#### Properties <a name="Properties"></a>
+
+##### `hostedZoneId`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.hostedZoneId"></a>
+
+- *Type:* `string`
+
+HostZoneID.
+
+---
+
+##### `recordName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.recordName"></a>
+
+- *Type:* `string`
+
+recordname (e.g., superjks).
+
+---
+
+##### `zoneName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.zoneName"></a>
+
+- *Type:* `string`
+
+zonename (e.g., `cdk-construct-zone.com`).
+
+---
+
+##### `acm`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.acm"></a>
+
+- *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
+- *Default:* Create a new certificate (validate from DNS)
+
+Provide a certificate.
+
+---
+
+##### `ttl`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.ttl"></a>
+
+- *Type:* [`@aws-cdk/core.Duration`](#@aws-cdk/core.Duration)
+
+record cache time.
+
+---
+
+### IJenkinsEC2Props <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props"></a>
+
+- *Extends:* [`@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps`](#@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps)
+
+- *Implemented By:* [`@cdk-constructs-zone/super-ec2.IJenkinsEC2Props`](#@cdk-constructs-zone/super-ec2.IJenkinsEC2Props)
 
 
+#### Properties <a name="Properties"></a>
 
-## interface ISuperEC2BaseProps 🔹 <a id="cdk-constructs-zone-super-ec2-isuperec2baseprops"></a>
+##### `amiOSType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.amiOSType"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.AmiOSType`](#@cdk-constructs-zone/super-ec2.AmiOSType)
+- *Default:* Amzaon Linux 2.
+
+Super EC2 OS you want.
+
+---
+
+##### `instanceType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.instanceType"></a>
+
+- *Type:* [`@aws-cdk/aws-ec2.InstanceType`](#@aws-cdk/aws-ec2.InstanceType)
+- *Default:* t3.small.
+
+Super EC2 Instance Type.
+
+---
+
+##### `vpc`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.vpc"></a>
+
+- *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
+- *Default:* Create a new Vpc.
+
+Super EC2 Vpc.
+
+---
+
+##### `domain`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.domain"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.IDomainProps`](#@cdk-constructs-zone/super-ec2.IDomainProps)
+- *Default:* Not use certificate and route53
+
+Provide domain attribute.
+
+---
+
+##### `loadbalancer`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.loadbalancer"></a>
+
+- *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
+- *Default:* Create ApplicationLoadBalancer
+
+Provide a loadbalancer.
+
+Only support ALB and NLB.
+
+---
+
+##### `loadbalancerType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.loadbalancerType"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.ELBtype`](#@cdk-constructs-zone/super-ec2.ELBtype)
+- *Default:* ELBtype.ALB
+
+ELB type.
+
+---
+
+### ISuperDomainProps <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps"></a>
+
+- *Extends:* [`@cdk-constructs-zone/super-ec2.IDomainProps`](#@cdk-constructs-zone/super-ec2.IDomainProps)
+
+- *Implemented By:* [`@cdk-constructs-zone/super-ec2.ISuperDomainProps`](#@cdk-constructs-zone/super-ec2.ISuperDomainProps)
 
 
+#### Properties <a name="Properties"></a>
+
+##### `hostedZoneId`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.hostedZoneId"></a>
+
+- *Type:* `string`
+
+HostZoneID.
+
+---
+
+##### `recordName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.recordName"></a>
+
+- *Type:* `string`
+
+recordname (e.g., superjks).
+
+---
+
+##### `zoneName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.zoneName"></a>
+
+- *Type:* `string`
+
+zonename (e.g., `cdk-construct-zone.com`).
+
+---
+
+##### `acm`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.acm"></a>
+
+- *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
+- *Default:* Create a new certificate (validate from DNS)
+
+Provide a certificate.
+
+---
+
+##### `ttl`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.ttl"></a>
+
+- *Type:* [`@aws-cdk/core.Duration`](#@aws-cdk/core.Duration)
+
+record cache time.
+
+---
+
+##### `loadbalancer`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.loadbalancer"></a>
+
+- *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
+
+---
+
+### ISuperEC2BaseProps <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps"></a>
+
+- *Implemented By:* [`@cdk-constructs-zone/super-ec2.IJenkinsEC2Props`](#@cdk-constructs-zone/super-ec2.IJenkinsEC2Props), [`@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps`](#@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps)
 
 
-### Properties
+#### Properties <a name="Properties"></a>
+
+##### `amiOSType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.amiOSType"></a>
+
+- *Type:* [`@cdk-constructs-zone/super-ec2.AmiOSType`](#@cdk-constructs-zone/super-ec2.AmiOSType)
+- *Default:* Amzaon Linux 2.
+
+Super EC2 OS you want.
+
+---
+
+##### `instanceType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.instanceType"></a>
+
+- *Type:* [`@aws-cdk/aws-ec2.InstanceType`](#@aws-cdk/aws-ec2.InstanceType)
+- *Default:* t3.small.
+
+Super EC2 Instance Type.
+
+---
+
+##### `vpc`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.vpc"></a>
+
+- *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
+- *Default:* Create a new Vpc.
+
+Super EC2 Vpc.
+
+---
+
+## Enums <a name="Enums"></a>
+
+### AmiOSType <a name="AmiOSType"></a>
+
+#### `UBUNTU_18_04` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.UBUNTU_18_04"></a>
+
+Ubuntu 18.04 ami.
+
+---
 
 
-Name | Type | Description 
------|------|-------------
-**amiOSType**?🔹 | <code>[AmiOSType](#cdk-constructs-zone-super-ec2-amiostype)</code> | Super EC2 OS you want.<br/>__*Default*__: Amzaon Linux 2.
-**instanceType**?🔹 | <code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code> | Super EC2 Instance Type.<br/>__*Default*__: t3.small.
-**vpc**?🔹 | <code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code> | Super EC2 Vpc.<br/>__*Default*__: Create a new Vpc.
+#### `UBUNTU_20_04` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.UBUNTU_20_04"></a>
+
+Ubuntu 20.04 ami.
+
+---
 
 
+#### `CENTOS_7` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.CENTOS_7"></a>
 
-## enum AmiOSType 🔹 <a id="cdk-constructs-zone-super-ec2-amiostype"></a>
+CentOS 7 ami.
 
-
-
-Name | Description
------|-----
-**UBUNTU_18_04** 🔹|Ubuntu 18.04 ami.
-**UBUNTU_20_04** 🔹|Ubuntu 20.04 ami.
-**CENTOS_7** 🔹|CentOS 7 ami.
-**CENTOS_8** 🔹|CentOS 8 ami.
-**AMAZON_LINUX_2** 🔹|Amazon Linux 2 ami.
-**AMAZON_LINUX** 🔹|Amazon Linux  ami.
+---
 
 
-## enum ELBtype 🔹 <a id="cdk-constructs-zone-super-ec2-elbtype"></a>
+#### `CENTOS_8` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.CENTOS_8"></a>
+
+CentOS 8 ami.
+
+---
 
 
+#### `AMAZON_LINUX_2` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.AMAZON_LINUX_2"></a>
 
-Name | Description
------|-----
-**ALB** 🔹|Application Load Balancer.
-**NLB** 🔹|Network Load Balancer.
+Amazon Linux 2 ami.
 
+---
+
+
+#### `AMAZON_LINUX` <a name="@cdk-constructs-zone/super-ec2.AmiOSType.AMAZON_LINUX"></a>
+
+Amazon Linux  ami.
+
+---
+
+
+### ELBtype <a name="ELBtype"></a>
+
+#### `ALB` <a name="@cdk-constructs-zone/super-ec2.ELBtype.ALB"></a>
+
+Application Load Balancer.
+
+---
+
+
+#### `NLB` <a name="@cdk-constructs-zone/super-ec2.ELBtype.NLB"></a>
+
+Network Load Balancer.
+
+---
 
