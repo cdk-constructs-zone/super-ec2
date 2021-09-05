@@ -60,3 +60,4 @@ Note: Jenkins initial admin password has been written to `/home/ec2-user/jenkins
 ```
 aws ssm start-session --target instance-id
 ```
+
