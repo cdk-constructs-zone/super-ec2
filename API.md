@@ -4,7 +4,7 @@
 
 ### JenkinsEC2 <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2"></a>
 
-#### Initializer <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.Initializer"></a>
+#### Initializers <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.Initializer"></a>
 
 ```typescript
 import { JenkinsEC2 } from '@cdk-constructs-zone/super-ec2'
@@ -56,7 +56,7 @@ public jenkinsUserData()
 
 ### SuperDomain <a name="@cdk-constructs-zone/super-ec2.SuperDomain"></a>
 
-#### Initializer <a name="@cdk-constructs-zone/super-ec2.SuperDomain.Initializer"></a>
+#### Initializers <a name="@cdk-constructs-zone/super-ec2.SuperDomain.Initializer"></a>
 
 ```typescript
 import { SuperDomain } from '@cdk-constructs-zone/super-ec2'
@@ -107,7 +107,7 @@ new SuperDomain(scope: Construct, id: string, props: ISuperDomainProps)
 
 ### SuperEC2Base <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base"></a>
 
-#### Initializer <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.Initializer"></a>
+#### Initializers <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.Initializer"></a>
 
 ```typescript
 import { SuperEC2Base } from '@cdk-constructs-zone/super-ec2'
