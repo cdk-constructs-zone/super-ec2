@@ -11,7 +11,7 @@ const project = new AwsCdkConstructLibrary({
   authorOrganization: true,
   authorUrl: 'https://github.com/cdk-constructs-zone',
   npmAccess: 'public',
-  cdkVersion: '1.121.0',
+  cdkVersion: '1.122.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: '@cdk-constructs-zone/super-ec2',
@@ -42,7 +42,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-sns-subscriptions',
     '@aws-cdk/custom-resources',
   ],
-  minNodeVersion: '12.19.0',
   autoDetectBin: false,
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     ignoreProjen: false,
