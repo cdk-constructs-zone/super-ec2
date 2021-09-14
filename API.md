@@ -43,11 +43,19 @@ public jenkinsUserData()
 
 ##### `loadbalancer`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.property.loadbalancer"></a>
 
+```typescript
+public readonly loadbalancer: ApplicationLoadBalancer | NetworkLoadBalancer;
+```
+
 - *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
 
 ---
 
 ##### `domain`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.JenkinsEC2.property.domain"></a>
+
+```typescript
+public readonly domain: SuperDomain;
+```
 
 - *Type:* [`@cdk-constructs-zone/super-ec2.SuperDomain`](#@cdk-constructs-zone/super-ec2.SuperDomain)
 
@@ -88,17 +96,29 @@ new SuperDomain(scope: Construct, id: string, props: ISuperDomainProps)
 
 ##### `acm`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.acm"></a>
 
+```typescript
+public readonly acm: ICertificate;
+```
+
 - *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
 
 ---
 
 ##### `record`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.record"></a>
 
+```typescript
+public readonly record: ARecord;
+```
+
 - *Type:* [`@aws-cdk/aws-route53.ARecord`](#@aws-cdk/aws-route53.ARecord)
 
 ---
 
 ##### `zone`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperDomain.property.zone"></a>
+
+```typescript
+public readonly zone: IHostedZone;
+```
 
 - *Type:* [`@aws-cdk/aws-route53.IHostedZone`](#@aws-cdk/aws-route53.IHostedZone)
 
@@ -139,11 +159,19 @@ new SuperEC2Base(scope: Construct, id: string, props: ISuperEC2BaseProps)
 
 ##### `defaultSecurityGroup`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.defaultSecurityGroup"></a>
 
+```typescript
+public readonly defaultSecurityGroup: SecurityGroup;
+```
+
 - *Type:* [`@aws-cdk/aws-ec2.SecurityGroup`](#@aws-cdk/aws-ec2.SecurityGroup)
 
 ---
 
 ##### `instance`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.instance"></a>
+
+```typescript
+public readonly instance: Instance;
+```
 
 - *Type:* [`@aws-cdk/aws-ec2.Instance`](#@aws-cdk/aws-ec2.Instance)
 
@@ -151,11 +179,19 @@ new SuperEC2Base(scope: Construct, id: string, props: ISuperEC2BaseProps)
 
 ##### `userData`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.userData"></a>
 
+```typescript
+public readonly userData: UserData;
+```
+
 - *Type:* [`@aws-cdk/aws-ec2.UserData`](#@aws-cdk/aws-ec2.UserData)
 
 ---
 
 ##### `vpc`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.SuperEC2Base.property.vpc"></a>
+
+```typescript
+public readonly vpc: IVpc;
+```
 
 - *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
 
@@ -175,6 +211,10 @@ new SuperEC2Base(scope: Construct, id: string, props: ISuperEC2BaseProps)
 
 ##### `hostedZoneId`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.hostedZoneId"></a>
 
+```typescript
+public readonly hostedZoneId: string;
+```
+
 - *Type:* `string`
 
 HostZoneID.
@@ -182,6 +222,10 @@ HostZoneID.
 ---
 
 ##### `recordName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.recordName"></a>
+
+```typescript
+public readonly recordName: string;
+```
 
 - *Type:* `string`
 
@@ -191,6 +235,10 @@ recordname (e.g., superjks).
 
 ##### `zoneName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.zoneName"></a>
 
+```typescript
+public readonly zoneName: string;
+```
+
 - *Type:* `string`
 
 zonename (e.g., `cdk-construct-zone.com`).
@@ -198,6 +246,10 @@ zonename (e.g., `cdk-construct-zone.com`).
 ---
 
 ##### `acm`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.acm"></a>
+
+```typescript
+public readonly acm: ICertificate;
+```
 
 - *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
 - *Default:* Create a new certificate (validate from DNS)
@@ -207,6 +259,10 @@ Provide a certificate.
 ---
 
 ##### `ttl`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IDomainProps.property.ttl"></a>
+
+```typescript
+public readonly ttl: Duration;
+```
 
 - *Type:* [`@aws-cdk/core.Duration`](#@aws-cdk/core.Duration)
 
@@ -225,6 +281,10 @@ record cache time.
 
 ##### `amiOSType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.amiOSType"></a>
 
+```typescript
+public readonly amiOSType: AmiOSType;
+```
+
 - *Type:* [`@cdk-constructs-zone/super-ec2.AmiOSType`](#@cdk-constructs-zone/super-ec2.AmiOSType)
 - *Default:* Amzaon Linux 2.
 
@@ -233,6 +293,10 @@ Super EC2 OS you want.
 ---
 
 ##### `instanceType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.instanceType"></a>
+
+```typescript
+public readonly instanceType: InstanceType;
+```
 
 - *Type:* [`@aws-cdk/aws-ec2.InstanceType`](#@aws-cdk/aws-ec2.InstanceType)
 - *Default:* t3.small.
@@ -243,6 +307,10 @@ Super EC2 Instance Type.
 
 ##### `vpc`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.vpc"></a>
 
+```typescript
+public readonly vpc: IVpc;
+```
+
 - *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
 - *Default:* Create a new Vpc.
 
@@ -252,6 +320,10 @@ Super EC2 Vpc.
 
 ##### `domain`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.domain"></a>
 
+```typescript
+public readonly domain: IDomainProps;
+```
+
 - *Type:* [`@cdk-constructs-zone/super-ec2.IDomainProps`](#@cdk-constructs-zone/super-ec2.IDomainProps)
 - *Default:* Not use certificate and route53
 
@@ -260,6 +332,10 @@ Provide domain attribute.
 ---
 
 ##### `loadbalancer`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.loadbalancer"></a>
+
+```typescript
+public readonly loadbalancer: ApplicationLoadBalancer | NetworkLoadBalancer;
+```
 
 - *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
 - *Default:* Create ApplicationLoadBalancer
@@ -271,6 +347,10 @@ Only support ALB and NLB.
 ---
 
 ##### `loadbalancerType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.IJenkinsEC2Props.property.loadbalancerType"></a>
+
+```typescript
+public readonly loadbalancerType: ELBtype;
+```
 
 - *Type:* [`@cdk-constructs-zone/super-ec2.ELBtype`](#@cdk-constructs-zone/super-ec2.ELBtype)
 - *Default:* ELBtype.ALB
@@ -290,6 +370,10 @@ ELB type.
 
 ##### `hostedZoneId`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.hostedZoneId"></a>
 
+```typescript
+public readonly hostedZoneId: string;
+```
+
 - *Type:* `string`
 
 HostZoneID.
@@ -297,6 +381,10 @@ HostZoneID.
 ---
 
 ##### `recordName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.recordName"></a>
+
+```typescript
+public readonly recordName: string;
+```
 
 - *Type:* `string`
 
@@ -306,6 +394,10 @@ recordname (e.g., superjks).
 
 ##### `zoneName`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.zoneName"></a>
 
+```typescript
+public readonly zoneName: string;
+```
+
 - *Type:* `string`
 
 zonename (e.g., `cdk-construct-zone.com`).
@@ -313,6 +405,10 @@ zonename (e.g., `cdk-construct-zone.com`).
 ---
 
 ##### `acm`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.acm"></a>
+
+```typescript
+public readonly acm: ICertificate;
+```
 
 - *Type:* [`@aws-cdk/aws-certificatemanager.ICertificate`](#@aws-cdk/aws-certificatemanager.ICertificate)
 - *Default:* Create a new certificate (validate from DNS)
@@ -323,6 +419,10 @@ Provide a certificate.
 
 ##### `ttl`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.ttl"></a>
 
+```typescript
+public readonly ttl: Duration;
+```
+
 - *Type:* [`@aws-cdk/core.Duration`](#@aws-cdk/core.Duration)
 
 record cache time.
@@ -330,6 +430,10 @@ record cache time.
 ---
 
 ##### `loadbalancer`<sup>Required</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperDomainProps.property.loadbalancer"></a>
+
+```typescript
+public readonly loadbalancer: ApplicationLoadBalancer | NetworkLoadBalancer;
+```
 
 - *Type:* [`@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.ApplicationLoadBalancer) | [`@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer`](#@aws-cdk/aws-elasticloadbalancingv2.NetworkLoadBalancer)
 
@@ -344,6 +448,10 @@ record cache time.
 
 ##### `amiOSType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.amiOSType"></a>
 
+```typescript
+public readonly amiOSType: AmiOSType;
+```
+
 - *Type:* [`@cdk-constructs-zone/super-ec2.AmiOSType`](#@cdk-constructs-zone/super-ec2.AmiOSType)
 - *Default:* Amzaon Linux 2.
 
@@ -353,6 +461,10 @@ Super EC2 OS you want.
 
 ##### `instanceType`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.instanceType"></a>
 
+```typescript
+public readonly instanceType: InstanceType;
+```
+
 - *Type:* [`@aws-cdk/aws-ec2.InstanceType`](#@aws-cdk/aws-ec2.InstanceType)
 - *Default:* t3.small.
 
@@ -361,6 +473,10 @@ Super EC2 Instance Type.
 ---
 
 ##### `vpc`<sup>Optional</sup> <a name="@cdk-constructs-zone/super-ec2.ISuperEC2BaseProps.property.vpc"></a>
+
+```typescript
+public readonly vpc: IVpc;
+```
 
 - *Type:* [`@aws-cdk/aws-ec2.IVpc`](#@aws-cdk/aws-ec2.IVpc)
 - *Default:* Create a new Vpc.
