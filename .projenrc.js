@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism } = require('projen');
+const { AwsCdkConstructLibrary } = require('projen');
 
 const PROJECT_NAME = 'super-ec2';
 const PROJECT_DESCRIPTION = 'A construct lib for AWS CDK EC2';
@@ -43,13 +43,13 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/custom-resources',
   ],
   autoDetectBin: false,
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve'],
       secret: 'AUTOMATION_GITHUB_TOKEN',
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['neilkuan', 'benkajaja'],
