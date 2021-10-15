@@ -57,7 +57,7 @@ const project = new AwsCdkConstructLibrary({
   devDeps: [
     'xmldom',
   ],
-  python: {
+  publishToPypi: {
     distName: 'super-ec2',
     module: 'super_ec2',
   },
