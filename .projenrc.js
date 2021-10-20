@@ -1,10 +1,8 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
-const PROJECT_NAME = 'super-ec2';
 const PROJECT_DESCRIPTION = 'A construct lib for AWS CDK EC2';
 
 const project = new AwsCdkConstructLibrary({
-  name: PROJECT_NAME,
   description: PROJECT_DESCRIPTION,
   author: '@cdk-constructs-zone',
   authorAddress: 'https://github.com/cdk-constructs-zone',
@@ -14,7 +12,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.122.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
-  name: '@cdk-constructs-zone/super-ec2',
+  name: 'super-ec2',
   repositoryUrl: 'https://github.com/cdk-constructs-zone/super-ec2.git',
   keywords: ['aws', 'cdk', 'ec2', 'construct'],
   catalog: {
@@ -57,6 +55,7 @@ const project = new AwsCdkConstructLibrary({
   devDeps: [
     'xmldom',
   ],
+  packageName: '@cdk-constructs-zone/super-ec2',
   publishToPypi: {
     distName: 'super-ec2',
     module: 'super_ec2',
