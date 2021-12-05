@@ -1,15 +1,15 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { awscdk } = require('projen');
 
 const PROJECT_DESCRIPTION = 'A construct lib for AWS CDK EC2';
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   description: PROJECT_DESCRIPTION,
   author: '@cdk-constructs-zone',
   authorAddress: 'https://github.com/cdk-constructs-zone',
   authorOrganization: true,
   authorUrl: 'https://github.com/cdk-constructs-zone',
   npmAccess: 'public',
-  cdkVersion: '1.122.0',
+  cdkVersion: '1.134.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'super-ec2',
