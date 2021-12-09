@@ -60,6 +60,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'super-ec2',
     module: 'super_ec2',
   },
+  bundledDeps: [
+    '@aws-cdk/assert@^1.134.0',
+  ],
+  workflowNodeVersion: '^14.17.0',
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log', '*.zip'];
