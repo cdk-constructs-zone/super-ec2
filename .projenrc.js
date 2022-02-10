@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorOrganization: true,
   authorUrl: 'https://github.com/cdk-constructs-zone',
   npmAccess: 'public',
-  cdkVersion: '1.134.0',
+  cdkVersion: '1.144.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'super-ec2',
