@@ -1,4 +1,4 @@
-const { awscdk } = require('projen');
+const { awscdk, javascript } = require('projen');
 
 const PROJECT_DESCRIPTION = 'A construct lib for AWS CDK EC2';
 
@@ -46,6 +46,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     workflowOptions: {
       labels: ['auto-approve'],
       secret: 'AUTOMATION_GITHUB_TOKEN',
+      schedule: javascript.UpgradeDependenciesSchedule.WEEKLY,
     },
   },
   autoApproveOptions: {
