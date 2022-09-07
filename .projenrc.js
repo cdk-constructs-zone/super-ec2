@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   authorOrganization: true,
   authorUrl: 'https://github.com/cdk-constructs-zone',
   npmAccess: 'public',
-  cdkVersion: '1.144.0',
+  cdkVersion: '1.171.0',
   defaultReleaseBranch: 'main',
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'super-ec2',
@@ -64,8 +64,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   bundledDeps: [
     '@aws-cdk/assert@^1.134.0',
   ],
-  workflowNodeVersion: '^14.17.0',
+  typescriptVersion: '3.9.10',
 });
+project.package.addField('resolutions', {
+  '@types/responselike': '1.0.0',
+});
+
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'images', 'yarn-error.log', '*.zip'];
 project.gitignore.exclude(...common_exclude);
