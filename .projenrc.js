@@ -64,10 +64,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   bundledDeps: [
     '@aws-cdk/assert@^1.134.0',
   ],
-  typescriptVersion: '3.9.10',
-});
-project.package.addField('resolutions', {
-  '@types/responselike': '1.0.0',
+  typescriptVersion: '4.9',
 });
 
 
