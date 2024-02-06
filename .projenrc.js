@@ -54,7 +54,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     allowedUsernames: ['neilkuan', 'benkajaja'],
   },
   devDeps: [
-    'xmldom',
+    'ts-jest@29.1.2',
+    'jsii-rosetta@5.0.x',
   ],
   packageName: '@cdk-constructs-zone/super-ec2',
   publishToPypi: {
@@ -64,7 +65,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   bundledDeps: [
     '@aws-cdk/assert@^1.134.0',
   ],
-  typescriptVersion: '4.9',
+  minNodeVersion: '20.10.0',
+  workflowNodeVersion: '20.10.0',
+  typescriptVersion: '^5',
+  jsiiVersion: '5.3.x',
 });
 
 
